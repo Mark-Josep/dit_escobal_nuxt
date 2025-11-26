@@ -1,4 +1,5 @@
 <template>
+  <div>
   <v-app>
 
 
@@ -17,9 +18,10 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-folder" title="My Files" value="myfiles"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-multiple" title="Shared with me" value="shared"></v-list-item>
-          <v-list-item prepend-icon="mdi-star" title="Starred" value="starred"></v-list-item>
+          <v-list-item prepend-icon="mdi-folder" title="Dashboard" value="myfiles"></v-list-item>
+          <v-list-item to="/category" prepend-icon="mdi-account-multiple" title="Category" value="shared"></v-list-item>
+          <v-list-item to="/inventory" prepend-icon="mdi-star" title="Inventory" value="starred"></v-list-item>
+          <v-list-item to="/users" prepend-icon="mdi-star" title="User" value="starred"></v-list-item>
         </v-list>
       </v-navigation-drawer>
     <v-app-bar>
@@ -28,11 +30,21 @@
   </template>
 
   <v-app-bar-title>Application Bar</v-app-bar-title>
-</v-app-bar>
+</v-app-bar> 
     <v-main>
       <v-container>
         <slot />
       </v-container>
     </v-main>
   </v-app>
+
+  </div>
+
+
+
+
+
+
+
+  
 </template>
